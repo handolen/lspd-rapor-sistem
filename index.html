@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="app.css">
+    <title>Tutuklama Raporu</title>
+</head>
+<body>
+    <div class="ui four column doubling stackable grid container">
+        <div class="ui secondary  menu">
+            <a href="http://127.0.0.1/index.html"class="item active">
+              Tutuklama Raporu
+            </a>
+            <a href="/trafikcezasi/index.html"class="item">
+              Ceza Raporu
+            </a>
+            <a class="item">
+              EKLENECEK
+            </a>
+          </div>
+        </div>
+    <div class="ui four column doubling stackable grid container">
+        <div class="ui form">
+            <div class="ui segment">
+                <h2>Tutuklama Raporu</h2>
+                <h4 class="ui dividing header">Tutuklama Bilgisi</h4>
+                <div class="field">
+                    <label>Tarih ve Konum</label>
+                    <div class="two fields">
+                        <div class="field">
+                            <input type="text" name="tarih" placeholder="GG/AAA/YYYY">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="konum" placeholder="Konum">
+                        </div>
+                    </div>
+                </div>
+                <h4 class="ui dividing header">Personel Bilgileri</h4>
+                <div class="field">
+                    <label>Tutuklamayı yapan personel bilgileri</label>
+                    <div class="three fields">
+                        <div class="field">
+                            <input type="text" name="birincimemur" placeholder="Memur Adı Soyadı">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="ikincimemur" placeholder="Varsa Partnerinin Adı Soyadı">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="birimkodu" placeholder="Birim Kodu">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Tutuklunun Bilgileri</label>
+                    <div class="three fields">
+                        <div class="field">
+                            <input type="text" name="tutuklanan" placeholder="Ad Soyad">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="tutuklanmasebebi" placeholder="Tutuklanma Sebebi">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="hapissuresi" placeholder="Hapis Süresi">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Olayı detaylıca açıklayın.</label>
+                    <textarea id="positive" name="rapor" placeholder="Üçüncü ağızdan raporu doldurun."></textarea>
+                </div>
+            </div>
+            
+                <h2>Rapor Çıktısı</h2>
+                <p>Raporun çıktısını almak için şablonun başındaki ## ve sonundaki ## işaretlerini mouse imleciniz ile tutup kopyalayın ve foruma yapıştırın.</p>
+            <div class="field">
+                <div id="output" readonly></div>
+            </div>
+            <div class="ui secondary button" id="submit">Şablonu Al</div>
+        </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+</body>
+</html>
