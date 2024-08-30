@@ -6,40 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="app.css">
-    <title>Tutuklama Raporu</title>
+    <title>El Koyma Raporu</title>
 </head>
 <body>
     <div class="ui four column doubling stackable grid container">
         <div class="ui secondary  menu">
-            <a href="https://handolen.github.io/lspd-rapor-sistem/"class="item active">
+            <a href="https://handolen.github.io/lspd-rapor-sistem/"class="item">
               Tutuklama Raporu
             </a>
             <a href="https://handolen.github.io/lspd-rapor-sistem/trafikcezasi"class="item">
               Ceza Raporu
             </a>
+            <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item active">
+              El Koyma Raporu
+            </a>
             <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item">
-                El Koyma Raporu
+                İfade Raporu
               </a>
               <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item">
-                  İfade Raporu
-                </a>
-                <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item">
-                  Sorgu Raporu
-                </a>
-                <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item">
-                  APB Raporu
-                </a>
+                Sorgu Raporu
+              </a>
+              <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item">
+                APB Raporu
+              </a>
           </div>
-        </div>
+    </div>
     <div class="ui four column doubling stackable grid container">
         <div class="ui form">
             <div class="ui segment">
-                <h2>Tutuklama Raporu</h2>
-                <h4 class="ui dividing header">Tutuklama Bilgisi</h4>
+                <h2>El Koyma Raporu</h2>
+                <h4 class="ui dividing header">Rapor Bilgisi</h4>
                 <div class="field">
                     <label>Tarih ve Konum</label>
                     <div class="two fields">
-                        <div class="field">
+                        <div class="fielsd">
                             <input type="text" name="tarih" placeholder="GG/AAA/YYYY">
                         </div>
                         <div class="field">
@@ -49,7 +49,7 @@
                 </div>
                 <h4 class="ui dividing header">Personel Bilgileri</h4>
                 <div class="field">
-                    <label>Tutuklamayı yapan personel bilgileri</label>
+                    <label>El Koyan Memur Bilgileri</label>
                     <div class="three fields">
                         <div class="field">
                             <input type="text" name="birincimemur" placeholder="Memur Adı Soyadı">
@@ -63,22 +63,18 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label>Tutuklunun Bilgileri</label>
+                    <label>El Koyulan Materyal Bilgileri</label>
                     <div class="three fields">
                         <div class="field">
-                            <input type="text" name="tutuklanan" placeholder="Ad Soyad">
+                            <input type="text" name="tutuklanan" placeholder="El Koyulan Kişi">
                         </div>
                         <div class="field">
-                            <input type="text" name="tutuklanmasebebi" placeholder="Tutuklanma Sebebi">
+                            <input type="text" name="tutuklanmasebebi" placeholder="El Koyulan Materyal">
                         </div>
                         <div class="field">
-                            <input type="text" name="hapissuresi" placeholder="Hapis Süresi">
+                            <input type="text" name="hapissuresi" placeholder="El Koyulan Miktar">
                         </div>
                     </div>
-                </div>
-                <div class="field">
-                    <label>Olayı detaylıca açıklayın.</label>
-                    <textarea id="positive" name="rapor" placeholder="Üçüncü ağızdan raporu doldurun."></textarea>
                 </div>
             </div>
             
