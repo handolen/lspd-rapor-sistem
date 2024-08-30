@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="app.css">
-    <title>El Koyma Raporu</title>
+    <title>Ceza Raporu</title>
 </head>
 <body>
     <div class="ui four column doubling stackable grid container">
@@ -17,25 +17,25 @@
             <a href="https://handolen.github.io/lspd-rapor-sistem/trafikcezasi"class="item">
               Ceza Raporu
             </a>
-            <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item active">
-              El Koyma Raporu
-            </a>
-            <a href="https://handolen.github.io/lspd-rapor-sistem/ifaderapor" class="item">
-                İfade Raporu
+            <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item">
+                El Koyma Raporu
               </a>
-              <a href="https://handolen.github.io/lspd-rapor-sistem/sorgurapor" class="item">
-                Sorgu Raporu
-              </a>
-              <a href="https://handolen.github.io/lspd-rapor-sistem/apbrapor" class="item">
-                APB Raporu
-              </a>
+              <a href="https://handolen.github.io/lspd-rapor-sistem/ifaderapor" class="item active">
+                  İfade Raporu
+                </a>
+                <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item">
+                  Sorgu Raporu
+                </a>
+                <a href="https://handolen.github.io/lspd-rapor-sistem/elkoyma" class="item">
+                  APB Raporu
+                </a>
           </div>
     </div>
     <div class="ui four column doubling stackable grid container">
         <div class="ui form">
             <div class="ui segment">
-                <h2>El Koyma Raporu</h2>
-                <h4 class="ui dividing header">Rapor Bilgisi</h4>
+                <h2>İfade Raporu</h2>
+                <h4 class="ui dividing header">İfade Bilgisi</h4>
                 <div class="field">
                     <label>Tarih ve Konum</label>
                     <div class="two fields">
@@ -49,7 +49,7 @@
                 </div>
                 <h4 class="ui dividing header">Personel Bilgileri</h4>
                 <div class="field">
-                    <label>El Koyan Memur Bilgileri</label>
+                    <label>İfadeyi Alan Personelin Bilgisi</label>
                     <div class="three fields">
                         <div class="field">
                             <input type="text" name="birincimemur" placeholder="Memur Adı Soyadı">
@@ -63,18 +63,22 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label>El Koyulan Materyal Bilgileri</label>
+                    <label>İfadesi Alınan Kişinin Bilgileri</label>
                     <div class="three fields">
                         <div class="field">
-                            <input type="text" name="tutuklanan" placeholder="El Koyulan Kişi">
+                            <input type="text" name="tutuklanan" placeholder="Ad Soyad">
                         </div>
                         <div class="field">
-                            <input type="text" name="tutuklanmasebebi" placeholder="El Koyulan Materyal">
+                            <input type="text" name="tutuklanmasebebi" placeholder="Telefon Numarası">
                         </div>
                         <div class="field">
-                            <input type="text" name="hapissuresi" placeholder="El Koyulan Miktar">
+                            <input type="text" name="hapissuresi" placeholder="İkamet Adresi">
                         </div>
                     </div>
+                </div>
+                <div class="field">
+                    <label>İfade</label>
+                    <textarea id="positive" name="rapor" placeholder="İfadeyi detaylıca sivilin ağzından ve tüm olayı anlatacak şekilde doldurun."></textarea>
                 </div>
             </div>
             
