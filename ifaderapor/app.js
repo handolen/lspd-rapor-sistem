@@ -9,7 +9,7 @@ $('#submit').click(function () {
             <p>##</p>
             <img style="height: 100px;" src="https://i.hizliresim.com/j7lwfrk.png" alt="Image">
             <p style="color: grey; font-size: 100%;">LOS SANTOS POLICE DEPARTMENT</p>
-            <p style="color: black; font-size: 150%; font-weight: bold;">CEZA RAPORU</p>
+            <p style="color: black; font-size: 150%; font-weight: bold;">İFADE RAPORU</p>
         </center>
         <table style="font-family: Arial; width: 100%;">
             <tr>
@@ -23,7 +23,7 @@ $('#submit').click(function () {
 
         <table style="font-family: Arial; width: 100%;">
             <tr>
-                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">CEZAYI YAZAN MEMUR</strong></td>
+                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">İFADEYİ ALAN MEMUR</strong></td>
                 <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">VARSA PARTNER ISMI</strong></td>
                 <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">BİRİM KODU</strong></td>
             </tr>
@@ -38,21 +38,19 @@ $('#submit').click(function () {
         <table style="font-family: Arial; width: 100%;">
             <tr>
                 <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">VATANDAŞ ADI</strong></td>
-                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">CEZA SEBEBİ</strong></td>
-                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">İbraz Edilen Miktar</strong></td>
-                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">ARAÇ BİLGİLERİ</strong></td>
+                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">TELEFON NUMARASI</strong></td>
+                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">İKAMET ADRESİ</strong></td>
             </tr>
             <tr>
                 <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px">${$('input[name="tutuklanan"]').val()} </td>
                 <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px">${$('input[name="tutuklanmasebebi"]').val()}</td>
                 <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px">${$('input[name="hapissuresi"]').val()}</td>
-                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px">${$('input[name="aracbilgisi"]').val()}</td>
             </tr>
         </table>
 
         <table style="font-family: Arial; width: 100%;">
             <tr>
-                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">OLAYIN AÇIKLAMASI</strong></td>
+                <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px"><strong class="text-strong">İFADE</strong></td>
             </tr>
             <tr>
                 <td valign="top" style="border-top:1px solid #111;border-right:1px solid #111;border-left:1px solid #111;border-bottom:1px solid #111;padding:3px;padding-left:6px;margin:1px;border-radius:2px">${$('textarea[name="rapor"]').val()}</td>
