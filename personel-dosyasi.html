@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="app.css">
+    <title>Personel Dosyası</title>
+    <style>
+        .template { display: none; }
+        .template-container { background-color: #ffffff; border: 1px solid #000000; padding: 5px; margin-bottom: 10px; }
+        .template table { width: 100%; border-collapse: collapse; }
+        .template td { vertical-align: top; padding: 5px; }
+        .template .photo { width: 250px; height: 300px; }
+        .template .info { padding-left: 20px; }
+        .template .center { text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="ui four column doubling stackable grid container">
+        <div class="ui form">
+            <div class="ui segment">
+                <h2>Personel Dosyası</h2>
+                <h4 class="ui dividing header">Personel Bilgileri</h4>
+                <div class="field">
+                    <label>Soyad, Ad, Doğum Tarihi, Cinsiyet ve Uyruk</label>
+                    <div class="five fields">
+                        <div class="field">
+                            <input type="text" name="soyad" placeholder="SOYAD">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="ad" placeholder="AD">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="dogumtarihi" placeholder="DOĞUM TARİHİ">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="cinsiyet" placeholder="CİNSİYET">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="uyruk" placeholder="UYRUĞU">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Hizmet Bilgileri</label>
+                    <div class="four fields">
+                        <div class="field">
+                            <input type="text" name="rutbe" placeholder="RÜTBESİ">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="hizmetbaslangic" placeholder="HİZMET BAŞLANGICI">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="rozetnumarasi" placeholder="ROZET NUMARASI">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="statu" placeholder="STATÜ">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Kişisel Bilgiler</label>
+                    <div class="four fields">
+                        <div class="field">
+                            <input type="text" name="telno" placeholder="TELEFON NUMARASI">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="resmi-adres" placeholder="RESMİ ADRES">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="email" placeholder="E-MAİL">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="zimmet" placeholder="ZİMMET NUMARASI">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Birim Bilgileri</label>
+                    <div class="three fields">
+                        <div class="field">
+                            <input type="text" name="birim" placeholder="BİRİM">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="birimgiris" placeholder="BİRİM GİRİŞ">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="birimkonum" placeholder="BİRİM KONUM">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Kimlik Numarası</label>
+                    <input type="text" name="kimliknumarasi" placeholder="KİMLİK NUMARASI">
+                </div>
+            </div>
+            
+            <h2>Rapor Çıktısı</h2>
+            <p>Raporun çıktısını almak için aşağıdaki butona tıklayın.</p>
+            <div class="field">
+                <div id="output" readonly></div>
+            </div>
+            <div class="ui secondary button" id="submit">Şablonu Al</div>
+        </div>
+    </div>
+
+    <div class="template">
+        ###
+        <div class="template-container">
+            <table>
+                <tr>
+                    <td style="width: 250px;">
+                        <img src="https://i.hizliresim.com/9lsqime.jpg" alt="Personel Fotoğrafı" class="photo">
+                    </td>
+                    <td class="info">
+                        <p><strong>SOYADI:</strong> <span id="temp-soyad"></span></p>
+                        <p><strong>ADI:</strong> <span id="temp-ad"></span></p>
+                        <p><strong>KİMLİK NUMARASI:</strong> <span id="temp-kimliknumarasi"></span></p>
+                        <p><strong>DOĞUM TARİHİ:</strong> <span id="temp-dogumtarihi"></span></p>
+                        <p><strong>CİNSİYET:</strong> <span id="temp-cinsiyet"></span></p>
+                        <p><strong>UYRUĞU:</strong> <span id="temp-uyruk"></span></p>
+                        <br>
+                        <p><strong>RÜTBESİ:</strong> <span id="temp-rutbe"></span></p>
+                        <p><strong>HİZMET BAŞLANGICI:</strong> <span id="temp-hizmetbaslangic"></span></p>
+                        <p><strong>ROZET NUMARASI:</strong> <span id="temp-rozetnumarasi"></span></p>
+                        <p><strong>STATÜ:</strong> <span id="temp-statu"></span></p>
+                        <br>
+                        <p><strong>TELEFON NUMARASI:</strong> <span id="temp-telno"></span></p>
+                        <p><strong>RESMİ ADRES:</strong> <span id="temp-resmi-adres"></span></p>
+                        <p><strong>E-MAİL:</strong> <span id="temp-email"></span></p>
+                        <p><strong>ZİMMET NUMARASI:</strong> <span id="temp-zimmet"></span></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="template-container">
+            <table>
+                <tr>
+                    <td class="center">
+                        <strong>BİRİM BİLGİLERİ</strong>
+                        <p>*15x15 birim logosu</p>
+                        <p><strong>BİRİM:</strong> <span id="temp-birim"></span></p>
+                        <p><strong>BİRİM GİRİŞ:</strong> <span id="temp-birimgiris"></span></p>
+                        <p><strong>BİRİM KONUM:</strong> <span id="temp-birimkonum"></span></p>
+                    </td>
+                    <td class="center">
+                        <strong>UZAKLAŞTIRMA VE CEZALAR</strong>
+                        <p>(<em>17.05.2024 - 20.05.2024</em> *....... 3(üç) gün süreli uzaklaştırma)</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        ###
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $(document).ready(function() {
+        $('#submit').on('click', function() {
+            // Form verilerini al
+            var formData = {
+                'soyad': $('input[name="soyad"]').val(),
+                'ad': $('input[name="ad"]').val(),
+                'kimliknumarasi': $('input[name="kimliknumarasi"]').val(),
+                'dogumtarihi': $('input[name="dogumtarihi"]').val(),
+                'cinsiyet': $('input[name="cinsiyet"]').val(),
+                'uyruk': $('input[name="uyruk"]').val(),
+                'rutbe': $('input[name="rutbe"]').val(),
+                'hizmetbaslangic': $('input[name="hizmetbaslangic"]').val(),
+                'rozetnumarasi': $('input[name="rozetnumarasi"]').val(),
+                'statu': $('input[name="statu"]').val(),
+                'telno': $('input[name="telno"]').val(),
+                'resmi-adres': $('input[name="resmi-adres"]').val(),
+                'email': $('input[name="email"]').val(),
+                'zimmet': $('input[name="zimmet"]').val(),
+                'birim': $('input[name="birim"]').val(),
+                'birimgiris': $('input[name="birimgiris"]').val(),
+                'birimkonum': $('input[name="birimkonum"]').val()
+            };
+
+            // Şablonu doldur
+            for (var key in formData) {
+                $('#temp-' + key).text(formData[key]);
+            }
+
+            // Doldurulmuş şablonu göster
+            var filledTemplate = $('.template').html();
+            $('#output').html(filledTemplate);
+        });
+    });
+    </script>
+</body>
+</html>
