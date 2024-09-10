@@ -92,10 +92,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="field">
-                    <label>Kimlik Numarası</label>
-                    <input type="text" name="kimliknumarasi" placeholder="KİMLİK NUMARASI">
-                </div>
             </div>
             
             <h2>Rapor Çıktısı</h2>
@@ -118,7 +114,6 @@
                     <td class="info">
                         <p><strong>SOYADI:</strong> <span id="temp-soyad"></span></p>
                         <p><strong>ADI:</strong> <span id="temp-ad"></span></p>
-                        <p><strong>KİMLİK NUMARASI:</strong> <span id="temp-kimliknumarasi"></span></p>
                         <p><strong>DOĞUM TARİHİ:</strong> <span id="temp-dogumtarihi"></span></p>
                         <p><strong>CİNSİYET:</strong> <span id="temp-cinsiyet"></span></p>
                         <p><strong>UYRUĞU:</strong> <span id="temp-uyruk"></span></p>
@@ -166,7 +161,6 @@
             var formData = {
                 'soyad': $('input[name="soyad"]').val(),
                 'ad': $('input[name="ad"]').val(),
-                'kimliknumarasi': $('input[name="kimliknumarasi"]').val(),
                 'dogumtarihi': $('input[name="dogumtarihi"]').val(),
                 'cinsiyet': $('input[name="cinsiyet"]').val(),
                 'uyruk': $('input[name="uyruk"]').val(),
