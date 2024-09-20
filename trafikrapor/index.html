@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="app.css">
+    <title>Kaza Raporu</title>
+</head>
+<body>
+    </div>
+    <div class="ui four column doubling stackable grid container">
+        <div class="ui form">
+            <div class="ui segment">
+                <h2>Kaza Raporu</h2>
+                <h4 class="ui dividing header">1.1 - TARİH VE LOKASYON BİLGİLERİ</h4>
+                <div class="two fields">
+                    <div class="field">
+                        <label>1.1.1 - Trafik Kazasının Yaşandığı Tarih ve Saat</label>
+                        <input type="text" name="kaza_tarih_saat" placeholder="GG/AA/YYYY SS:DD">
+                    </div>
+                    <div class="field">
+                        <label>1.1.2 - Trafik Kazasının Yaşandığı Bölge ve Coğrafik Konum</label>
+                        <input type="text" name="kaza_konum" placeholder="Konum">
+                    </div>
+                </div>
+
+                <h4 class="ui dividing header">1.2 - TUTANAK TUTAN EKİP VE PERSONEL BİLGİLERİ</h4>
+                <div class="four fields">
+                    <div class="field">
+                        <label>1.2.1 - Trafik Kazasını Raporlayan Ekip Kodu</label>
+                        <input type="text" name="raporlayan_ekip_kodu" placeholder="Ekip Kodu">
+                    </div>
+                    <div class="field">
+                        <label>1.2.2 - Raporlamayı Yapan Personelin Adı, Soyadı ve Rozet Numarası</label>
+                        <input type="text" name="raporlayan_personel" placeholder="Ad Soyad ve Rozet No">
+                    </div>
+                    <div class="field">
+                        <label>1.2.3 - Raporlamayı Yapan Personelin Trafik Büro Rütbesi</label>
+                        <input type="text" name="raporlayan_rutbe" placeholder="Rütbe">
+                    </div>
+                    <div class="field">
+                        <label>1.2.4 - Raporlamayı Yapan Personelin İmzası</label>
+                        <input type="text" name="raporlayan_imza" placeholder="İmza">
+                    </div>
+                </div>
+
+                <h4 class="ui dividing header">1.3 - EKİP VE SÜRÜCÜ PERSONEL BİLGİLERİ</h4>
+                <div class="four fields">
+                    <div class="field">
+                        <label>1.3.1 - Trafik Kazasına Karışan Ekip Kodu</label>
+                        <input type="text" name="karisan_ekip_kodu" placeholder="Ekip Kodu">
+                    </div>
+                    <div class="field">
+                        <label>1.3.2 - Sürücü Personelin Adı, Soyadı ve Rozet Numarası</label>
+                        <input type="text" name="surucu_personel" placeholder="Ad Soyad ve Rozet No">
+                    </div>
+                    <div class="field">
+                        <label>1.3.3 - Sürücü Personelin İfadesi</label>
+                        <textarea name="surucu_personel_ifade" placeholder="İfade"></textarea>
+                    </div>
+                    <div class="field">
+                        <label>1.3.4 - Sürücü Personelin İmzası</label>
+                        <input type="text" name="surucu_personel_imza" placeholder="İmza">
+                    </div>
+                </div>
+
+                <h4 class="ui dividing header">1.4 - SÜRÜCÜ VATANDAŞ BİLGİLERİ</h4>
+                <div class="three fields">
+                    <div class="field">
+                        <label>1.4.1 - Sürücü Vatandaşın Adı, Soyadı ve Telefon Numarası</label>
+                        <input type="text" name="surucu_vatandas" placeholder="Ad Soyad ve Telefon">
+                    </div>
+                    <div class="field">
+                        <label>1.4.2 - Sürücü Vatandaşın İfadesi</label>
+                        <textarea name="surucu_vatandas_ifade" placeholder="İfade"></textarea>
+                    </div>
+                    <div class="field">
+                        <label>1.4.3 - Sürücü Vatandaşın İmzası</label>
+                        <input type="text" name="surucu_vatandas_imza" placeholder="İmza">
+                    </div>
+                </div>
+
+                <h4 class="ui dividing header">1.5 - HASAR KAYIT BİLGİLERİ</h4>
+                <div class="two fields">
+                    <div class="field">
+                        <label>1.5.1 - Polis Aracındaki Hasarların Bilgisi</label>
+                        <textarea name="polis_araci_hasar" placeholder="Hasar bilgisi"></textarea>
+                    </div>
+                    <div class="field">
+                        <label>1.5.1.1 - Polis Aracı Görüntüsü</label>
+                        <input type="text" name="polis_araci_goruntu" placeholder="Görüntü URL'si">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>1.5.2 - Sivil Araçtaki Hasarların Bilgisi</label>
+                        <textarea name="sivil_arac_hasar" placeholder="Hasar bilgisi"></textarea>
+                    </div>
+                    <div class="field">
+                        <label>1.5.2.1 - Sivil Aracın Görüntüsü</label>
+                        <input type="text" name="sivil_arac_goruntu" placeholder="Görüntü URL'si">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>1.5.3 - Kazanın Bodycam & Dashcam Görüntüsü (Varsa)</label>
+                    <input type="text" name="kaza_goruntu" placeholder="Görüntü URL'si">
+                </div>
+
+                <h4 class="ui dividing header">1.6 - UYGULANAN İŞLEM</h4>
+                <div class="two fields">
+                    <div class="field">
+                        <label>1.6.1 - Hatalı bulunan taraf</label>
+                        <input type="text" name="hatali_taraf" placeholder="Hatalı taraf">
+                    </div>
+                    <div class="field">
+                        <label>1.6.2 - Uygulanan İşlem</label>
+                        <textarea name="uygulanan_islem" placeholder="Uygulanan işlem"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Rapor Çıktısı</h2>
+            <p>Raporun çıktısını almak için şablonun başındaki ## ve sonundaki ## işaretlerini mouse imleciniz ile tutup kopyalayın ve foruma yapıştırın.</p>
+            <div class="field">
+                <div id="output" readonly></div>
+            </div>
+            <div class="ui secondary button" id="submit">Şablonu Al</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+</body>
+</html>
